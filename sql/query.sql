@@ -50,3 +50,18 @@ WHERE title = 'bangla';
 
 ALTER TABLE books
 ADD COLUMN code VARCHAR(10);
+
+ALTER TABLE books
+   ALTER COLUMN price TYPE NUMERIC(8,2);
+
+ALTER TABLE books
+ALTER COLUMN published_year TYPE NUMERIC(10, 2)
+
+ALTER TABLE books
+DROP COLUMN code;
+
+SELECT * FROM books
+WHERE title IN ('To Kill a Mockingbird', '1984', 'The Great Gatsby');
+
+SELECT * FROM books
+WHERE title LIKE '%The%';
